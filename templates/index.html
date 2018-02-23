@@ -6,5 +6,32 @@
 </head>
 <body>
 
+	<div id="pagewrap">
+		<h1>Users</h1>
+		<table id="users">
+			<thead>
+				<tr>
+					<td>id</td>
+					<td>Full Name</td>
+					<td>Email</td>
+					<td>Created At</td>
+					<td>Action</td>
+				</tr>
+			</thead>
+			<tbody>
+				{% for user in users %}
+				<tr>
+					<td>{{ user['id'] }}</td>
+					<td>{{ user['first_name'] }}&nbsp;{{ user['last_name'] }}</td>
+					<td>{{ user['email'] }}</td>
+					<td>{{ user['created_at'] }}</td>
+					<td><a href="">Show</a><a href="">Edit</a><a href="">Delete</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+
 </body>
 </html>
