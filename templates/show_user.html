@@ -14,11 +14,9 @@
 					<p>Full Name: {{ u['first_name'] }}&nbsp;{{ u['last_name'] }}</p>
 					<p>Email: {{ u['email'] }}</p>
 					<p>Created at: {{ u['created_at'] }}</p>
-					<p><a href="">Edit</a> | <a href="">Delete</a></p>
-				</tr>
+					<p><a href="/users/{{ u['id'] }}/edit">Edit</a> | <a href="/users/{{ u['id'] }}/destroy">Delete</a></p>
 				{% endfor %}
-			</tbody>
-		</table>
+				<a href="/users">Go Back</a>
 	</div>
 
 

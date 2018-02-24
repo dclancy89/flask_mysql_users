@@ -11,11 +11,11 @@
 		<table id="users">
 			<thead>
 				<tr>
-					<td>id</td>
-					<td>Full Name</td>
-					<td>Email</td>
-					<td>Created At</td>
-					<td>Action</td>
+					<th>id</th>
+					<th>Full Name</th>
+					<th>Email</th>
+					<th>Created At</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,11 +25,12 @@
 					<td><a href="/users/{{ user['id'] }}">{{ user['first_name'] }}&nbsp;{{ user['last_name'] }}</a></td>
 					<td>{{ user['email'] }}</td>
 					<td>{{ user['created_at'] }}</td>
-					<td><a href="/users/{{ user['id'] }}">Show</a><a href="">Edit</a><a href="">Delete</a></td>
+					<td class="links"><a href="/users/{{ user['id'] }}">Show</a><a href="/users/{{ user['id'] }}/edit">Edit</a><a href="/users/{{ user['id'] }}/destroy">Delete</a></td>
 				</tr>
 				{% endfor %}
 			</tbody>
 		</table>
+		<a href="/users/new">Add a new user</a>
 	</div>
 
 

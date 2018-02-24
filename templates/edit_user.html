@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+	<div id="pagewrap">
+		<h1>Edit User {{ id }}</h1>
+		<form id="new_user" action="/users/{{ id }}" method="POST">
+			<label>
+				First Name:
+				<input type="text" name="first_name" value="{{ u['first_name'] }}">
+			</label>
+
+			<label>
+				Last Name:
+				<input type="text" name="last_name" value="{{ u['last_name'] }}">
+			</label>
+
+			<label>
+				Email:
+				<input type="text" name="email" value="{{ u['email'] }}">
+			</label>
+			<input type="submit" value="Update" class="button">
+		</form>
+		<a href="/users">Go Back</a>
+	</div>
+</body>
+</html>

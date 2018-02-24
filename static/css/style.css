@@ -1,0 +1,57 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #dbdbdb;
+}
+
+#pagewrap {
+	max-width: 75rem;
+	margin: 0 auto;
+}
+
+table {
+	border-spacing: 0;
+	border: 1px solid black;
+	border-right: none;
+}
+
+table tr td, table tr th {
+	padding: 0.4rem;
+	border-right: 1px solid black;
+	text-align: left;
+}
+
+table tr th {
+	border-bottom: 1px solid black;
+}
+
+td.links a {
+	margin: 0 0.2rem;
+}
+
+table tbody tr:nth-child(odd) td {
+	background-color: #c6c4c4;
+}
+
+.button {
+	background-color: #5A7FA8;
+	border: 1px solid black;
+	color: white;
+	text-transform: capitalize;
+	border-radius: 0;
+	box-shadow: 2px 2px 2px black;
+	padding: 6px 12px;
+}
+
+form#new_user {
+	margin-bottom: 1rem;
+}
+
+form#new_user label {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+form#new_user label input {
+	display: block;
+}
