@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+	<div id="pagewrap">
+		
+				{% for u in user %}
+				
+					<h1>User {{ u['id'] }}</h1>
+					<p>Full Name: {{ u['first_name'] }}&nbsp;{{ u['last_name'] }}</p>
+					<p>Email: {{ u['email'] }}</p>
+					<p>Created at: {{ u['created_at'] }}</p>
+					<p><a href="">Edit</a> | <a href="">Delete</a></p>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+
+</body>
+</html>

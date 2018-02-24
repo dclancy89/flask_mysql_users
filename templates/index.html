@@ -22,10 +22,10 @@
 				{% for user in users %}
 				<tr>
 					<td>{{ user['id'] }}</td>
-					<td>{{ user['first_name'] }}&nbsp;{{ user['last_name'] }}</td>
+					<td><a href="/users/{{ user['id'] }}">{{ user['first_name'] }}&nbsp;{{ user['last_name'] }}</a></td>
 					<td>{{ user['email'] }}</td>
 					<td>{{ user['created_at'] }}</td>
-					<td><a href="">Show</a><a href="">Edit</a><a href="">Delete</a></td>
+					<td><a href="/users/{{ user['id'] }}">Show</a><a href="">Edit</a><a href="">Delete</a></td>
 				</tr>
 				{% endfor %}
 			</tbody>

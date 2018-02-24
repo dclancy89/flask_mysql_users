@@ -19,5 +19,12 @@ def index():
 	return render_template('index.html', users=users)
 
 
+@app.route('/users/<id>')
+def show(id):
+	query = "SELECT * FROM friends WHERE id=:id"
+	data = {'id': id}
+	user = mysql.query_db (query, data)
+	return render_template('show_user.html', user=user)
+
 
 app.run(debug=True)
